@@ -2,7 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { TodoService } from 'src/app/services/todo.service';
+import { TodoService } from '../../services/todo.service';
 import { AppComponent } from './app.component';
 import { AppHarness } from './app.component.harness';
 import { provideStore } from '@ngrx/store';

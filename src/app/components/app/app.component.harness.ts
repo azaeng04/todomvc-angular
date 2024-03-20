@@ -64,14 +64,13 @@ export class AppHarness extends ComponentHarness {
     const list = await this.listHarness();
     if (list) {
       const todoRetrieved = await list.getTodoById(id);
-      const val = await todoRetrieved?.getTodoLabel();
       if (todoRetrieved) await todoRetrieved.check();
     }
   }
 
   async getTodos() {
     const listHarness = await this.listHarness();
-    return (await listHarness?.getTodos()) ?? [];
+    return listHarness ? listHarness.getTodos() : [];
   }
 
   async getTodosData() {
